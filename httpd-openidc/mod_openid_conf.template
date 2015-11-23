@@ -15,7 +15,7 @@ OIDCCryptoPassphrase toto
 
 <Location />
   AuthType openid-connect
-  Require user
+  Require valid-user
 </Location>
 
 #<LocationMatch "^/+$">
