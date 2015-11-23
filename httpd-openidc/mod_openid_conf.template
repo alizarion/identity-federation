@@ -14,19 +14,19 @@ OIDCRedirectURI %OIDCRedirectURI%
 OIDCCryptoPassphrase toto
 
 <Location />
-   AuthType openid-connect
-   Require user
+  AuthType openid-connect
+  Require user
 </Location>
 
-<LocationMatch "^/+$">
-    Options -Indexes
-    ErrorDocument 403 /.noindex.html
-</LocationMatch>
+#<LocationMatch "^/+$">
+ #   Options -Indexes
+  #  ErrorDocument 403 /.noindex.html
+#</LocationMatch>
 
-<Directory /usr/share/httpd/noindex>
-    AllowOverride None
-    Require all granted
-</Directory>
+#<Directory /usr/share/httpd/noindex>
+#    AllowOverride None
+#    Require all granted
+#</Directory>
 
 Alias /.noindex.html /usr/share/httpd/noindex/index.html
 Alias /noindex/css/bootstrap.min.css /usr/share/httpd/noindex/css/bootstrap.min.css
