@@ -1,3 +1,7 @@
+app1: 
+  image: alizarion/demo/openid-php
+  ports:
+   - "81:80"
 openidc-proxy:
   image: alizarion/openidc-proxy
   environment:
@@ -10,3 +14,7 @@ openidc-proxy:
   - no_proxy=${no_proxy}
   ports:
    - "80:80"
+  links:
+   - app1
+
+   
