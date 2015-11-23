@@ -1,5 +1,5 @@
 app1: 
-  image: alizarion/demo/openid-php
+  image: alizarion/openidc-php-demo
   ports:
    - "81:80"
 openidc-proxy:
