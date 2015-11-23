@@ -1,0 +1,16 @@
+openidc-proxy:
+  image: alizarion/openidc-proxy
+  environment:
+  - OIDCProviderMetadataURL=http://keycloak/auth/realms/supplier-portal/.well-known/openid-configuration
+  - OIDCClientID=openic-client-test
+  - OIDCClientSecret=630af799-5d90-4d6a-a177-6b74531ba0b7
+  - OIDCRedirectURI=http://localhost:8080/redirect_uri
+  ports:
+   - "81:80"
+  links:
+   - keycloak
+keycloak:
+  image: jboss/keycloak
+  ports:
+   - "80:8080"
+   
