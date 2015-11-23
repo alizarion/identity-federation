@@ -13,9 +13,22 @@ OIDCClientSecret %OIDCClientSecret%
 OIDCRedirectURI %OIDCRedirectURI%
 OIDCCryptoPassphrase toto
 
-<Location />
+
+
+
+
+<Location /app1/>
   AuthType openid-connect
   Require valid-user
+  ProxyPass http://app1:81/
+  ProxyPassReverse  http://app1:81/
+</Location>
+
+<Location /app2/>
+  AuthType openid-connect
+  Require valid-user
+  ProxyPass http://app2:82/
+  ProxyPassReverse  http://app2:82/
 </Location>
 
 <LocationMatch "^/+$">
