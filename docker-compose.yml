@@ -2,6 +2,10 @@ app1:
   image: alizarion/openidc-php-demo
   ports:
    - "81:80"
+app2: 
+  image: alizarion/openidc-java-demo
+  ports:
+   - "82:8080"
 openidc-proxy:
   image: alizarion/openidc-proxy
   environment:
@@ -16,5 +20,6 @@ openidc-proxy:
    - "80:80"
   links:
    - app1
+   - app2
 
    
