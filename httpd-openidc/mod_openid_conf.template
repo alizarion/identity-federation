@@ -17,18 +17,18 @@ OIDCCryptoPassphrase toto
 
 
 
-<Location /app1/>
+<Location /app1>
   AuthType openid-connect
   Require valid-user
-  ProxyPass http://app1:80/
-  ProxyPassReverse  http://app1:80/
+  ProxyPass http://app1:80
+  ProxyPassReverse  http://app1:80
 </Location>
 
-<Location /app2/>
+<Location /app2>
   AuthType openid-connect
-  Require valid-user
-  ProxyPass http://app2:80/
-  ProxyPassReverse  http://app2:80/
+  Require claim supplier-id:56
+  ProxyPass http://app2:8080/webapp
+  ProxyPassReverse  http://app2:8080/webapp
 </Location>
 
 <LocationMatch "^/+$">
