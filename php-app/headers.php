@@ -152,20 +152,14 @@ ul li {
 </style>
 </header>
 <body>
-  <a href="headers.php">Show me more</a>
+
 <div class='content'>
-  <div class='visible'>
-
-    <p>
-	PHP : Bonjour 
-    </p>
-
-    <ul>
-      <li><?php echo(apache_request_headers()['OIDC_CLAIM_given_name']) ?> !</li>
-      <li><?php echo(apache_request_headers()['OIDC_CLAIM_family_name']) ?> !</li>
-      <li><?php echo(apache_request_headers()['OIDC_CLAIM_email']) ?> !</li>
-    </ul>
-  </div>
+ <?php
+ $headers = apache_request_headers();
+ foreach ($headers as $header => $value) {
+     echo "$header: $value <br />\n";
+ }
+ ?>
 </div>
 
   </body>
