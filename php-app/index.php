@@ -8,7 +8,7 @@ body {
     width: 100%;
     height: 100%;
     position: fixed;
-    background-color: #34495e;
+    background-color: #73AD21;
 }
 .content {
     width: 600px;
