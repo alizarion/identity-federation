@@ -22,11 +22,11 @@ done
 
 
 echo "Permit root login without password from outside container."
-mysqladmin -u root password 'toor'
+mysql -e "GRANT ALL ON *.* TO root@'%' IDENTIFIED BY 'toor' WITH GRANT OPTION"
 
 echo "create the default database from the ADDed file."
 mysql < /tmp/init_keycloak_schema.sql
-
+mysqladmin -u root password 'toor'
 echo  "Tell the MySQL daemon to shutdown."
 mysqladmin shutdown
 
