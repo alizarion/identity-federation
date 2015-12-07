@@ -1,4 +1,4 @@
-FROM mysql:5.7
+FROM mysql:5.6
 MAINTAINER  selim@openlinux.fr
 
 # Copy the database schema to the /data directory
