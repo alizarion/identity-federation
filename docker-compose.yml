@@ -15,6 +15,8 @@ keycloak-app:
    - MYSQL_DATABASE=keycloak
    - MYSQL_PORT_3306_TCP_ADDR=keycloak-db
    - MYSQL_USER=root
+   - MYSQL_PASSWORD=
+   - MYSQL_ROOT_PASSWORD=
   links:
     - keycloak-db
 openidc-proxy:
