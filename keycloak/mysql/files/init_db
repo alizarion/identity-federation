@@ -28,7 +28,7 @@ echo "create the default database from the ADDed file."
 mysql < /tmp/init_keycloak_schema.sql
 mysqladmin -u root password 'toor'
 echo  "Tell the MySQL daemon to shutdown."
-mysqladmin shutdown
+mysqladmin -u root -p toor  shutdown
 
 echo  "Wait for the MySQL daemon to exit."
 wait $mysql_pid
