@@ -9,7 +9,7 @@
 set -e
 set -x
 
-mysql_install_db
+mysql_install_db --basedir=/var/lib/mysql   --datadir=/var/lib/mysql/data
 
 echo "Start the MySQL daemon in the background."
 /usr/sbin/mysqld &
