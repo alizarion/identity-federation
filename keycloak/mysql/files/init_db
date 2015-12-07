@@ -9,7 +9,7 @@
 set -e
 set -x
 
-mysqld --initialize
+mysql_install_db
 
 echo "Start the MySQL daemon in the background."
 /usr/sbin/mysqld &
@@ -20,7 +20,7 @@ until mysqladmin ping &>/dev/null; do
 done
 
 echo "Permit root login without password from outside container."
-mysql -e "GRANT ALL ON *.* TO root@'%' IDENTIFIED BY 'toor' WITH GRANT OPTION"
+mysql -e "GRANT ALL ON *.* TO root@'%' IDENTIFIED BY '' WITH GRANT OPTION"
 
 echo "create the default database from the ADDed file."
 mysql < /tmp/init_keycloak_schema.sql
