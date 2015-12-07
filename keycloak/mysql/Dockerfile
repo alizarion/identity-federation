@@ -5,9 +5,9 @@ MAINTAINER  selim@openlinux.fr
 ADD files/run_db files/init_db files/init_keycloak_schema.sql /tmp/
 
 # init_db will create the default
-# database from epcis_schema.sql, then
 # stop mysqld, and finally copy the /var/lib/mysql directory
 # to default_mysql_db.tar.gz
+RUN chmod +x /tmp/init_db
 RUN /tmp/init_db
 
 # run_db starts mysqld, but first it checks
