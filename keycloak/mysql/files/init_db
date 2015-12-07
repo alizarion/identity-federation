@@ -11,7 +11,7 @@ set -x
 
 mysql_install_db
 
-# Start the MySQL daemon in the background.
+echo "Start the MySQL daemon in the background."
 /usr/sbin/mysqld &
 mysql_pid=$!
 
@@ -19,19 +19,19 @@ until mysqladmin ping &>/dev/null; do
   echo -n "."; sleep 0.2
 done
 
-# Permit root login without password from outside container.
+echo "Permit root login without password from outside container."
 mysql -e "GRANT ALL ON *.* TO root@'%' IDENTIFIED BY '' WITH GRANT OPTION"
 
-# create the default database from the ADDed file.
+echo "create the default database from the ADDed file."
 mysql < /tmp/init_keycloak_schema.sql
 
-# Tell the MySQL daemon to shutdown.
+echo  "Tell the MySQL daemon to shutdown."
 mysqladmin shutdown
 
-# Wait for the MySQL daemon to exit.
+echo  "Wait for the MySQL daemon to exit."
 wait $mysql_pid
 
-# create a tar file with the database as it currently exists
+echo  "create a tar file with the database as it currently exists"
 tar czvf default_mysql.tar.gz /var/lib/mysql
 
 # the tarfile contains the initialized state of the database.
