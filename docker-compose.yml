@@ -10,6 +10,8 @@ keycloak-db:
   image: alizarion/keycloak-mysql-db
 keycloak-app: 
   image: jboss/keycloak-mysql
+  links:
+    - keycloak-db
 openidc-proxy:
   image: alizarion/openidc-proxy
   environment:
