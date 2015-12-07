@@ -19,8 +19,10 @@ until mysqladmin ping &>/dev/null; do
   echo -n "."; sleep 0.2
 done
 
+
+
 echo "Permit root login without password from outside container."
-mysql -e "GRANT ALL ON *.* TO root@'%' IDENTIFIED BY 'toor' WITH GRANT OPTION"
+mysqladmin -u root password 'toor'
 
 echo "create the default database from the ADDed file."
 mysql < /tmp/init_keycloak_schema.sql
