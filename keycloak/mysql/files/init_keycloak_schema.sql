@@ -1,9 +1,5 @@
-create database test;
-use test;
+create database keycloak;
+use keycloak;
 
-CREATE TABLE testtab
-(
-id INTEGER AUTO_INCREMENT,
-name TEXT,
-PRIMARY KEY (id)
-) COMMENT='this is my test table';
+CREATE USER 'keycloak'@'%'IDENTIFIED BY 'keycloak';
+GRANT ALL PRIVILEGES ON *.* TO 'keycloak'@'%' WITH GRANT OPTION;
