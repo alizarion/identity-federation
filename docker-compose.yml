@@ -13,7 +13,7 @@ keycloak-app:
   environment:
    - MYSQL_PORT_3306_TCP_PORT=3306
    - MYSQL_DATABASE=keycloak
-   - MYSQL_PORT_3306_TCP_ADDR=localhost
+   - MYSQL_PORT_3306_TCP_ADDR=keycloak-db
    - MYSQL_ROOT_PASSWORD=root
   links:
     - keycloak-db
