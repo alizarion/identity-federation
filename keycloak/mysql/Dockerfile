@@ -2,7 +2,7 @@ FROM mysql
 MAINTAINER  selim@openlinux.fr
 
 # Copy the database schema to the /data directory
-ADD files/run_db files/init_db files/int_keycloak_schema.sql /tmp/
+ADD files/run_db files/init_db files/init_keycloak_schema.sql /tmp/
 
 # init_db will create the default
 # database from epcis_schema.sql, then
