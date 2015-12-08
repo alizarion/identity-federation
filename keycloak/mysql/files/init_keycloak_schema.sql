@@ -1,12 +1,12 @@
 create database keycloak;
-use keycloak;
+
 
 CREATE USER 'keycloak'@'%' IDENTIFIED BY 'keycloak';
 GRANT ALL PRIVILEGES ON *.* TO 'keycloak'@'%' WITH GRANT OPTION;
 
 CREATE USER 'keycloak'@'localhost' IDENTIFIED BY 'keycloak';
 GRANT ALL PRIVILEGES ON keycloak.* TO 'keycloak'@'localhost' WITH GRANT OPTION;
-FLUSH PRIVILEGES;
+USE keycloak;
 
 DROP TABLE IF EXISTS `ADMIN_EVENT_ENTITY`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
