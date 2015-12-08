@@ -5,7 +5,7 @@ app1:
 app2: 
   image: alizarion/openidc-java-demo
   ports:
-   - "8080:8080"
+   - "82:8080"
 keycloak-db: 
   image: alizarion/keycloak-mysql-db
 keycloak-app: 
@@ -20,7 +20,7 @@ keycloak-app:
   links:
     - keycloak-db
   ports:
-   - "83:8080"
+   - "8080:8080"
 openidc-proxy:
   image: alizarion/openidc-proxy
   environment:
@@ -34,6 +34,7 @@ openidc-proxy:
   ports:
    - "80:80"
   links:
+   - keycloak-app
    - app1
    - app2
 
