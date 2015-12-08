@@ -19,6 +19,8 @@ keycloak-app:
    - MYSQL_ROOT_PASSWORD=toor
   links:
     - keycloak-db
+  ports:
+   - "83:8080"
 openidc-proxy:
   image: alizarion/openidc-proxy
   environment:
