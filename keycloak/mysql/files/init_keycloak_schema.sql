@@ -1,4 +1,4 @@
-create database keycloak;
+CREATE DATABASE keycloak;
 
 
 CREATE USER 'keycloak'@'%' IDENTIFIED BY 'keycloak';
@@ -7,6 +7,28 @@ GRANT ALL PRIVILEGES ON *.* TO 'keycloak'@'%' WITH GRANT OPTION;
 CREATE USER 'keycloak'@'localhost' IDENTIFIED BY 'keycloak';
 GRANT ALL PRIVILEGES ON keycloak.* TO 'keycloak'@'localhost' WITH GRANT OPTION;
 USE keycloak;
+
+
+-- MySQL dump 10.13  Distrib 5.6.27, for Linux (x86_64)
+--
+-- Host: localhost    Database: keycloak
+-- ------------------------------------------------------
+-- Server version	5.6.27
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `ADMIN_EVENT_ENTITY`
+--
 
 DROP TABLE IF EXISTS `ADMIN_EVENT_ENTITY`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -1896,8 +1918,3 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2015-12-08 12:40:53
-
-
-
-
-commit;
