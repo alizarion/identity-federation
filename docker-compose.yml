@@ -24,7 +24,7 @@ keycloak-app:
 openidc-proxy:
   image: alizarion/openidc-proxy
   environment:
-  - OIDCProviderMetadataURL=http://${hostname}:83/auth/realms/itesoft/.well-known/openid-configuration
+  - OIDCProviderMetadataURL=http://localhost:83/auth/realms/itesoft/.well-known/openid-configuration
   - OIDCClientID=demo-openidc-client
   - OIDCClientSecret=9a56d22b-d725-4c63-b38d-a4b71ecc6fb5
   - OIDCRedirectURI=http://localhost/app1/redirect_uri
