@@ -29,7 +29,6 @@ FLUSH PRIVILEGES;
 -- Current Database: `keycloak`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `keycloak` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
 USE `keycloak`;
 
