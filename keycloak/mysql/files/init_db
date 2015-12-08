@@ -23,7 +23,7 @@ done
 
 echo "Permit root login without password from outside container."
 mysql -e "GRANT ALL ON *.* TO root@'%' IDENTIFIED BY 'toor' WITH GRANT OPTION"
-mysql -r "FLUSH PRIVILEGES "
+mysql -e "FLUSH PRIVILEGES "
 
 echo "create the default database from the ADDed file."
 mysql < /tmp/init_keycloak_schema.sql
