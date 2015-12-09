@@ -34,7 +34,7 @@ openidc-proxy:
   ports:
    - "80:80"
   links:
-   - keycloak-app
+   - keycloak-app:localhost
    - app1
    - app2
 
