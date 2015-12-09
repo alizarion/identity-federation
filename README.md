@@ -17,6 +17,7 @@ Docker-compose
 * java-app, simple java app that print logged user informations.
 * php-app, simple php app service provider associated with the IDP.
 * httpd-openidc, front proxy that resolve openid access ton my apps.
+* keycloak-mysql database, to store IPD configuration and store user data.
 
 #RUN
       git clone https://github.com/alizarion/identity-federation.git
@@ -33,6 +34,8 @@ Docker-compose
 
 
 #How ?
+
+to simplify integration of federated SSO, this model uses a front-end proxy to manage the openid saml and workflows, backend application simply reads the header http enriched with the authenticated user informations exported token.
 
 ![diagram](img/federate1.png)
 
