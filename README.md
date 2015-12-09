@@ -21,5 +21,5 @@ Docker-compose
 
 How ?
 ----------------------
-![diagram](diagram.png)
+![diagram](img/diagram.png)
 
