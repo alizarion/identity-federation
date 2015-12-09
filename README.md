@@ -39,3 +39,7 @@ to simplify integration of federated SSO, this model uses a front-end proxy to m
 
 ![diagram](img/federate1.png)
 
+#Keycloak Admin credential
+
+* username : admin
+* password : azerty
