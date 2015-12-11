@@ -14,8 +14,6 @@ RUN curl -o /etc/yum.repos.d/security:shibboleth.repo http://download.opensuse.o
 
 RUN yum -y install shibboleth
 
-RUN rm -f /etc/httpd/conf.d/shib.conf
-
 ADD mod_shib_saml.conf /etc/httpd/conf.d/
 
 RUN rm -f /etc/shibboleth/shibboleth2.xml
