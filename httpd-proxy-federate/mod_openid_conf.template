@@ -24,6 +24,12 @@ RewriteEngine off
   ProxyPassReverse  http://app1:80
 </Location>
 
+<Location /openidc/secure/>
+  AuthType openid-connect
+  Require valid-user
+</Location>
+
+
 <Location /openidc/app2>
   AuthType openid-connect
   Require claim supplier-id:56
