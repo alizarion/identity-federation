@@ -12,12 +12,12 @@ RUN chmod 777 /usr/share/httpd/noindex/index.html
 RUN curl -o /etc/yum.repos.d/security:shibboleth.repo http://download.opensuse.org/repositories/security://shibboleth/CentOS_7/security:shibboleth.repo
 
 RUN yum -y install shibboleth
-RUN rm -f /etc/shibboleth/shibboleth2.xml
+
 RUN rm -f /etc/httpd/conf.d/shib.conf
-ADD mod_shib_saml.conf /etc/httpd/conf.d/
 
 ADD mod_shib_saml.conf /etc/httpd/conf.d/
-ADD shibboleth2.xml /etc/shibboleth/
+
+RUN rm -f /etc/shibboleth/shibboleth2.xml
 
 ENTRYPOINT ["/entrypoint.sh"]
 
