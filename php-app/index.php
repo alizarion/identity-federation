@@ -152,7 +152,7 @@ ul li {
 </style>
 </header>
 <body>
-  <a href="headers.php">Show me more</a>
+  <a href="app1/headers.php">Show me more</a>
 <div class='content'>
   <div class='visible'>
 
