@@ -1,6 +1,7 @@
 FROM alizarion/httpd:latest
 
 ADD mod_openid_conf.template /tmp/
+ADD shibboleth2_xml.template /tmp/
 ADD entrypoint.sh /
 
 RUN chmod +x /entrypoint.sh
