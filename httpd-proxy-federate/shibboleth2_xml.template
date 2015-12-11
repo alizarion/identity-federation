@@ -21,7 +21,7 @@
 
     <!-- The ApplicationDefaults element is where most of Shibboleth's SAML bits are defined. -->
     <ApplicationDefaults entityID="%SAMLClientID%"
-                         REMOTE_USER="eppn persistent-id targeted-id">
+                         REMOTE_USER="IT_CLAIM_email IT_CLAIM_given_name IT_CLAIM_family_name IT_CLAIM_supplier-id">
 
         <!--
         Controls session lifetimes, address checks, cookie handling, and the protocol handlers.

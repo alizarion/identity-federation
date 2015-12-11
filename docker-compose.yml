@@ -1,14 +1,14 @@
-app1: 
+app1:
   image: alizarion/openidc-php-demo
   ports:
    - "81:80"
-app2: 
+app2:
   image: alizarion/openidc-java-demo
   ports:
    - "82:8080"
-keycloak-db: 
+keycloak-db:
   image: alizarion/keycloak-mysql-db
-keycloak-app: 
+keycloak-app:
   image: jboss/keycloak-mysql
   environment:
    - MYSQL_PORT_3306_TCP_PORT=3306
