@@ -161,9 +161,9 @@ ul li {
     </p>
 
     <ul>
-      <li><?php echo(apache_request_headers()['OIDC_CLAIM_given_name']) ?> !</li>
-      <li><?php echo(apache_request_headers()['OIDC_CLAIM_family_name']) ?> !</li>
-      <li><?php echo(apache_request_headers()['OIDC_CLAIM_email']) ?> !</li>
+      <li><?php echo(apache_request_headers()['IT_CLAIM_given_name']) ?> !</li>
+      <li><?php echo(apache_request_headers()['IT_CLAIM_family_name']) ?> !</li>
+      <li><?php echo(apache_request_headers()['IT_CLAIM_email']) ?> !</li>
     </ul>
   </div>
 </div>

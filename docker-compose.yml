@@ -22,15 +22,15 @@ keycloak-app:
   ports:
    - "8080:8080"
 openidc-proxy:
-  image: alizarion/openidc-proxy
+  image: alizarion/httpd-proxy-federate
   environment:
   - OIDCProviderMetadataURL=http://localhost:8080/auth/realms/itesoft/.well-known/openid-configuration
   - OIDCClientID=demo-openidc-client
   - OIDCClientSecret=9a56d22b-d725-4c63-b38d-a4b71ecc6fb5
   - OIDCRedirectURI=http://localhost/app1/redirect_uri
-  - SAMLMetadataURL=http://localhost:8080/auth/realms/itesoft/.well-known/openid-configuration
+  - SAMLMetadataURL=http://localhost:8080/auth/realms/itesoft/protocol/saml/descriptor
   - SAMLClientID=demo-saml-client
-  - SAMLEntityID=http://localhost/app1/redirect_uri
+  - SAMLEntityID=http://localhost:8080/auth/realms/itesoft
   - http_proxy=${http_proxy}
   - https_proxy=${https_proxy}
   - no_proxy=${no_proxy}
