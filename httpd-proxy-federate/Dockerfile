@@ -16,7 +16,7 @@ RUN rm -f /etc/shibboleth/shibboleth2.xml
 RUN rm -f /etc/httpd/conf.d/shib.conf
 ADD mod_shib_saml.conf /etc/httpd/conf.d/
 
-ADD shib.conf /etc/httpd/conf.d/
+ADD mod_shib_saml.conf /etc/httpd/conf.d/
 ADD shibboleth2.xml /etc/shibboleth/
 
 ENTRYPOINT ["/entrypoint.sh"]
