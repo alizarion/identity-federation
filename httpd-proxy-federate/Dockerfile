@@ -15,7 +15,7 @@ RUN curl -o /etc/yum.repos.d/security:shibboleth.repo http://download.opensuse.o
 RUN yum -y install shibboleth
 
 ADD mod_shib_saml.conf /etc/httpd/conf.d/
-
+RUN rm -f /etc/httpd/conf.d/shib.conf
 RUN rm -f /etc/shibboleth/shibboleth2.xml
 RUN rm -f /etc/shibboleth/attribute-map.xml
 ADD attribute-map.xml /etc/shibboleth/
