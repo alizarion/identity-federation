@@ -1,3 +1,6 @@
 #!/bin/bash
 set -e
-httpd-foreground & shibd -F
+
+shibd
+
+httpd-foreground

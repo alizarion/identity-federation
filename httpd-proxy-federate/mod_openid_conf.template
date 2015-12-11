@@ -19,7 +19,7 @@ RewriteEngine off
 
 <Location /openidc/app1>
   AuthType openid-connect
-  Require valid-user
+  Require claim aud:%OIDCClientID%
   ProxyPass http://app1:80
   ProxyPassReverse  http://app1:80
 </Location>

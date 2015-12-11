@@ -73,7 +73,7 @@
         <!-- Example of remotely supplied batch of signed metadata. -->
         <MetadataProvider type="XML"
 	      uri="%SAMLMetadataURL%"
-              reloadInterval="7200">
+              reloadInterval="5">
         </MetadataProvider>
 
         <!-- Example of locally maintained metadata. -->
