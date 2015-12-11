@@ -12,5 +12,5 @@ fi
 
 sed -e "s;%OIDCProviderMetadataURL%;$OIDCProviderMetadataURL;g" -e "s;%OIDCClientID%;$OIDCClientID;g" -e "s;%OIDCClientSecret%;$OIDCClientSecret;g" -e "s;%OIDCRedirectURI%;$OIDCRedirectURI;g" /tmp/mod_openid_conf.template > /etc/httpd/conf.d/openidc.conf
 sed -e "s;%SAMLMetadataURL%;$SAMLMetadataURL;g" -e "s;%SAMLClientID%;$SAMLClientID;g" -e "s;%SAMLEntityID%;$SAMLEntityID;g" /tmp/shibboleth2_xml.template > /etc/shibboleth/shibboleth2.xml
-
+shibd
 exec "$@"
