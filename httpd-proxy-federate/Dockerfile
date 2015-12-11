@@ -3,7 +3,8 @@ FROM alizarion/httpd:latest
 ADD mod_openid_conf.template /tmp/
 ADD shibboleth2_xml.template /tmp/
 ADD entrypoint.sh /
-
+ADD start.sh /
+RUN chmod +x /start.sh
 RUN chmod +x /entrypoint.sh
 
 RUN rm -f /usr/share/httpd/noindex/index.html
@@ -22,4 +23,4 @@ ADD attribute-map.xml /etc/shibboleth/
 
 ENTRYPOINT ["/entrypoint.sh"]
 
-CMD ["httpd-foreground"]
+CMD sh /start.sh
