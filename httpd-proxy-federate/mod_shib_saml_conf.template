@@ -60,8 +60,8 @@ ShibCompatValidUser Off
   ShibRequestSetting requireSession 1
   ShibUseHeaders On
   require shib-session
-  ProxyPass http://app2:80
-  ProxyPassReverse  http://app2:80
+  ProxyPass http://app2:8080/app2
+  ProxyPassReverse  http://app2:8080/app2
 </Location>
 
 
