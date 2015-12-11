@@ -13,7 +13,7 @@ OIDCClientSecret %OIDCClientSecret%
 OIDCRedirectURI %OIDCRedirectURI%
 OIDCCryptoPassphrase toto
 
-OIDCClaimPrefix IT_
+OIDCClaimPrefix "IT_"
 
 RewriteEngine on
 
