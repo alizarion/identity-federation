@@ -27,7 +27,7 @@ openidc-proxy:
   - OIDCProviderMetadataURL=http://localhost:8080/auth/realms/itesoft/.well-known/openid-configuration
   - OIDCClientID=demo-openidc-client
   - OIDCClientSecret=9a56d22b-d725-4c63-b38d-a4b71ecc6fb5
-  - OIDCRedirectURI=http://localhost/app1/redirect_uri
+  - OIDCRedirectURI=http://localhost/openidc/app1/redirect_uri
   - SAMLMetadataURL=http://localhost:8080/auth/realms/itesoft/protocol/saml/descriptor
   - SAMLClientID=demo-saml-client
   - SAMLEntityID=http://localhost:8080/auth/realms/itesoft
