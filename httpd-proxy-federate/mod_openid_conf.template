@@ -15,7 +15,7 @@ OIDCCryptoPassphrase toto
 
 OIDCClaimPrefix "IT_CLAIM_"
 
-RewriteEngine on
+RewriteEngine off
 
 <Location /openidc/app1>
   AuthType openid-connect
