@@ -22,4 +22,4 @@ ADD attribute-map.xml /etc/shibboleth/
 
 ENTRYPOINT ["/entrypoint.sh"]
 
-CMD shibd ; httpd-foreground
+CMD  httpd-foreground ; shibd
