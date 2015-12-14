@@ -13,10 +13,10 @@ Docker-compose
 
 #Components
 
-* keycloak as OpenID Provider (IDP).
+* keycloak as OpenID/SAML Provider (IDP).
 * java-app, simple java app that print logged user informations.
 * php-app, simple php app service provider associated with the IDP.
-* httpd-openidc, front proxy that resolve openid access ton my apps.
+* httpd-proxy-federate, front proxy that sucure java-app and php-app .
 * keycloak-mysql database, to store IPD configuration and store user data.
 
 #RUN
