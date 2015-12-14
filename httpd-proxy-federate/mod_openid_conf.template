@@ -19,7 +19,7 @@ RewriteEngine off
 
 <Location /openidc/app1>
   AuthType openid-connect
-  Require claim aud:%OIDCClientID%
+  Require claim supplier-id:56
   ProxyPass http://app1:80
   ProxyPassReverse  http://app1:80
 </Location>
@@ -32,7 +32,7 @@ RewriteEngine off
 
 <Location /openidc/app2>
   AuthType openid-connect
-  Require claim supplier-id:56
+
   ProxyPass http://app2:8080/app2
   ProxyPassReverse  http://app2:8080/app2
 </Location>
