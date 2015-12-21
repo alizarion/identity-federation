@@ -1,0 +1,33 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<EntitiesDescriptor Name="urn:keycloak"
+	xmlns="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<EntityDescriptor entityID="http://tstbuydpoc01:8080/auth/realms/itesoft">
+		<IDPSSODescriptor WantAuthnRequestsSigned="true"
+			protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+            <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</NameIDFormat>
+            <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+			<NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</NameIDFormat>
+			<NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</NameIDFormat>
+
+			<SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+				Location="http://tstbuydpoc01:8080/auth/realms/itesoft/protocol/saml" />
+			<SingleSignOnService
+				Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+				Location="http://tstbuydpoc01:8080/auth/realms/itesoft/protocol/saml" />
+			<SingleLogoutService
+				Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+				Location="http://tstbuydpoc01:8080/auth/realms/itesoft/protocol/saml" />
+            <KeyDescriptor use="signing">
+                <dsig:KeyInfo xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
+                    <dsig:X509Data>
+                        <dsig:X509Certificate>
+                            MIICnTCCAYUCBgFRgq4pHDANBgkqhkiG9w0BAQsFADASMRAwDgYDVQQDDAdpdGVzb2Z0MB4XDTE1MTIwODE3Mzg1MFoXDTI1MTIwODE3NDAzMFowEjEQMA4GA1UEAwwHaXRlc29mdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALXDSA2VGhIThmzzsDQtvIdqoEWKn1jWZLmYPwRqRcTdk1wnHS1WFF3AIBlLhAAA2WD+FrYKBIrLEE4ZlAlVeMwTiF9FmT7+SFklqruzBDMECzb/AZjTGMf22Xr0YeMKGdPxwKamx1R0xzqMKaa8rcYdDmKPC9YiFzkjMa1QW0OndRzLLbvhNskAhuJdlod3YK99jJjlmB3w9p3vUrPdnhK7BaJVVE5np3H4kwqCu/U/FTe89eS9kjYZiCdWJLb2hR+rT61iYVsAUNHXemL+RJzFH/H/XhAzNEAJBos/lVF/F6QLE97QbTBo1Y+4jW2NxVrLxNO0ed9bnZMqUUi1J8kCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAV3KBUVfc6xaonHMUVegFx9rGwSTOqOn0YU2B5WEyPG27bU1IVtCTP7zOUfktOC7t1M4FsuMrxT/QMhRItC9CLa7uhv9MucrTlVMPLX7BuSDswRxpZhUqfq7pAKBmP3f3aTyIuBKuqoKhH4r+ZmOuYJFJoPbZRkGYFVo3Jbogw+jZzghrazVYYRfX54mXh4+X/qqymWnqcarGVzUaaJWPQ9ouLRYtNJxcMVRhfdt+zfaiFnSFf68hykorjX4JzvpMMuC3efWpvPJpxSeFgmLe4NV8ynhq9j6JNTFjhw7zIZRZKrj0/UQHUFPtOsqr3DAgJiWEG4iSB3IWsEYZJVJJgA==
+                        </dsig:X509Certificate>
+                    </dsig:X509Data>
+                </dsig:KeyInfo>
+            </KeyDescriptor>
+		</IDPSSODescriptor>
+	</EntityDescriptor>
+</EntitiesDescriptor>
