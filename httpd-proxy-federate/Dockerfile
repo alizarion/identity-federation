@@ -23,6 +23,7 @@ RUN rm -f /etc/httpd/conf.d/shib.conf
 RUN rm -f /etc/shibboleth/shibboleth2.xml
 RUN rm -f /etc/shibboleth/attribute-map.xml
 ADD attribute-map.xml /etc/shibboleth/
+ADD keycloakmetadata.xml /etc/shibboleth/
 
 ENTRYPOINT ["/entrypoint.sh"]
 
