@@ -1385,7 +1385,7 @@ CREATE TABLE `REDIRECT_URIS` (
 
 LOCK TABLES `REDIRECT_URIS` WRITE;
 /*!40000 ALTER TABLE `REDIRECT_URIS` DISABLE KEYS */;
-INSERT INTO `REDIRECT_URIS` VALUES ('24f36aa3-368e-4798-bb63-4c8e4a28e015','/auth/realms/master/account/*'),('5c5d42d9-6959-4ccf-ba6a-668163a90002','/auth/admin/master/console/*'),('d202ef5d-64e0-442f-8026-12763a234ae7','/auth/realms/itesoft/account/*'),('d4650907-4ad5-4cfc-8e0a-42936ab4c128','/auth/admin/itesoft/console/*'),('aa496eb9-dd57-4407-a562-bd67f95f3f85','http://localhost/*'),('76b6f994-0e2c-456b-a007-31c19e58ce66','http://localhost/*');
+INSERT INTO `REDIRECT_URIS` VALUES ('24f36aa3-368e-4798-bb63-4c8e4a28e015','/auth/realms/master/account/*'),('5c5d42d9-6959-4ccf-ba6a-668163a90002','/auth/admin/master/console/*'),('d202ef5d-64e0-442f-8026-12763a234ae7','/auth/realms/itesoft/account/*'),('d4650907-4ad5-4cfc-8e0a-42936ab4c128','/auth/admin/itesoft/console/*'),('aa496eb9-dd57-4407-a562-bd67f95f3f85','*'),('76b6f994-0e2c-456b-a007-31c19e58ce66','*');
 /*!40000 ALTER TABLE `REDIRECT_URIS` ENABLE KEYS */;
 UNLOCK TABLES;
 
