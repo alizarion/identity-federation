@@ -169,6 +169,20 @@
                 out.println("<li>"+ request.getHeader("IT_CLAIM_email")+ "</li>");
             %>
         </ul>
+        <div></div> 
+        <p>HTTP Request Headers Received</p>
+        <table>
+            <% Enumeration enumeration = request.getHeaderNames(); while (enumeration.hasMoreElements()) { String name=(String) enumeration.nextElement(); String value = request.getHeader(name); %>
+                <tr>
+                    <td>
+                        <%=n ame %>
+                    </td>
+                    <td>
+                        <%=v alue %>
+                    </td>
+                </tr>
+                <% } %>
+        </table>
     </div>
 </div>
 
